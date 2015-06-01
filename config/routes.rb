@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'pages/session'
-
-  get 'pages/users'
 
     root :to => 'pages#home'  
 

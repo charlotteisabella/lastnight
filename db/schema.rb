@@ -24,9 +24,18 @@ ActiveRecord::Schema.define(version: 20150531075403) do
   end
 
   create_table "foods", force: :cascade do |t|
+    t.text     "type"
+    t.float    "energy_in_kilojoules"
+    t.float    "sugar_in_grams"
+    t.float    "fat_in_grams"
+    t.float    "sodium_in_milligrams"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: :cascade do |t|
+    t.integer "age"
+    t.string  "gender"
   end
 
 end

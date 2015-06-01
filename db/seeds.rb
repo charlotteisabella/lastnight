@@ -1,7 +1,33 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+User.destroy_all
+Food.destroy_all
+Drink.destroy_all
+
+
+
+
+
+
+
+
+
+
+
+
+
+# == Schema Information
 #
-# Examples:
+# Table name: drinks
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+#  id                   :integer          not null, primary key
+#  energy_in_kilojoules :float
+#  sugar_in_grams       :float
+#  fat_in_grams         :float
+#  sodium_in_milligrams :float
+#  standard_drinks      :float
+#  created_at           :datetime
+#  updated_at           :datetime
+#
+
+# class Drink < ActiveRecord::Base
+#   belongs_to :user
+# end
