@@ -51,7 +51,7 @@
 
 .triangle {
   margin: 0px 45%;
-  top: 25px;
+  top: 30px;
 }
 
 
@@ -59,7 +59,7 @@
   background: hotpink;
   width: 10px;
   height: 50px;
-  margin: 20px auto 0;
+  margin: 30px 46.5% 0;
 }
 
 .oval {
@@ -76,6 +76,7 @@
   text-align: center;
  }
 
+/*********** FORMS ***********/
 
 .primary {
   font-size: 16px;
@@ -86,3 +87,26 @@
   border: 0px;
   border-radius: 2px;
 }
+
+select {
+  margin: 0 8%;
+  width: 84%;
+  padding: 50px;
+  font-size: 16px;
+  border-radius: 2px;
+  border: 2px lightgray solid;
+  background-color: #fff;
+  height: 50px;
+
+
+}
+
+label {
+  margin: 0 8%;
+  text-align: left;
+}
+
+
+
+
+

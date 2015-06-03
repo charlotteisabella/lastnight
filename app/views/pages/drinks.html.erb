@@ -1,24 +1,12 @@
-<div class="logo-bg">
-  <div class="triangle"></div>
-</div>
-
 <h2>What have you had to drink?</h2>
-<form>
-<label>QTY</label>
-  <select>
-    <option>1</option>
-    <option>2</option>
-    <option>3</option>
-    <option>4</option>
-    <option>5</option>
-    <option>6</option>
-    <option>7</option>
-    <option>8</option>
-    <option>9</option>
-    <option>10</option>
-  </select>
-  
-  <input type="text" name="drink">
 
-  <button class="primary">Submit</button>
-</form>
+
+<%= form_tag("/drinks_results/#{ @age }", method: "get") do %>
+  <%= label_tag(:qty, "Quantity") %>
+  <%= select_tag(:qty, options_for_select([[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]])) %>
+
+<%= label_tag(:drink, "Drink") %>
+<%= text_field_tag(:drink) %>
+
+  <%= submit_tag ( "Submit"), :class => 'primary' %>
+<% end %>

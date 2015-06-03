@@ -1,22 +1,9 @@
-<div class="logo-bg">
-  <div class="triangle"></div>
-  <div class="rectangle"></div>
-  <div class="oval"></div>
-</div>
-
 <h2>Tell us a little about yourself.</h2> 
 <h2>What's your...</h2>
 
-<form>
-  <label>Age Group</label>
-  <select>
-    <option>18-30</option>
-    <option>31-50</option>
-    <option>51-70</option>
-    <option>71+</option>
-  </select>
 
-  <label>Gender</label>
-
-  <button class="primary">Submit</button>
-</form>
+<%= form_tag("/stats_results", method: "get") do %>
+  <%= label_tag(:age, "Age Group") %>
+  <%= select_tag(:age, options_for_select([["18-30"], [ "31-50"], ["51-70"], ["71+"]]))%>
+  <%= submit_tag ("Submit"), :class => "primary" %>
+<% end %>
