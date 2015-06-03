@@ -11,14 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150531075403) do
+ActiveRecord::Schema.define(version: 20150531075355) do
 
   create_table "drinks", force: :cascade do |t|
+    t.text     "type"
     t.float    "energy_in_kilojoules"
     t.float    "sugar_in_grams"
     t.float    "fat_in_grams"
     t.float    "sodium_in_milligrams"
     t.float    "standard_drinks"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -29,6 +31,7 @@ ActiveRecord::Schema.define(version: 20150531075403) do
     t.float    "sugar_in_grams"
     t.float    "fat_in_grams"
     t.float    "sodium_in_milligrams"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -36,6 +39,9 @@ ActiveRecord::Schema.define(version: 20150531075403) do
   create_table "users", force: :cascade do |t|
     t.integer "age"
     t.string  "gender"
+    t.string  "name"
+    t.string  "email"
+    t.string  "password_digest"
   end
 
 end

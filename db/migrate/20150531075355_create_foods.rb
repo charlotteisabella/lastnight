@@ -6,6 +6,7 @@ class CreateFoods < ActiveRecord::Migration
       t.float :sugar_in_grams
       t.float :fat_in_grams
       t.float :sodium_in_milligrams
+      t.belongs_to :user
       t.timestamps
     end
   end

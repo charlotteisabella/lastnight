@@ -13,3 +13,76 @@
  *= require_tree .
  *= require_self
  */
+
+/*********** LOGO ***********/
+
+.logo-bg {
+  background-color: lightgray;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+}
+
+.triangle,
+.triangle:before,
+.triangle:after {
+    width:  30px;
+    height: 30px;
+    position: relative;
+    background: hotpink;
+    border-top-right-radius: 30%;
+}
+.triangle:before,
+.triangle:after {
+    content: '';
+    position: absolute;
+}
+
+.triangle {
+    transform: rotate(0deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+.triangle {
+  margin: 0px 45%;
+  top: 25px;
+}
+
+
+.rectangle {
+  background: hotpink;
+  width: 10px;
+  height: 50px;
+  margin: 20px auto 0;
+}
+
+.oval {
+  background: hotpink;
+  width:  40px;
+  height: 5px;
+  border-radius: 50%;
+  margin: auto;
+}
+
+/*********** FONT ***********/
+
+ h2 {
+  text-align: center;
+ }
+
+
+.primary {
+  font-size: 16px;
+  margin: 0 8%;
+  width: 84%;
+  height: 50px;
+  background-color: lightgreen;
+  border: 0px;
+  border-radius: 2px;
+}

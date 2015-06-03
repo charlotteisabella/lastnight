@@ -5,5 +5,6 @@ Rails.application.routes.draw do
     get '/drinks' => 'pages#drinks'
     get '/food' => 'pages#food'
     get '/results' => 'pages#results'
+    get '/stats' => 'pages#stats'
      
 end

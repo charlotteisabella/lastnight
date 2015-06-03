@@ -7,6 +7,7 @@ class CreateDrinks < ActiveRecord::Migration
       t.float :fat_in_grams
       t.float :sodium_in_milligrams
       t.float :standard_drinks
+      t.belongs_to :user
       t.timestamps
     end
   end
