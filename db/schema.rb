@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20150604050302) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "drinks", force: :cascade do |t|
     t.float    "energy_in_kilojoules"
     t.float    "sugar_in_grams"
