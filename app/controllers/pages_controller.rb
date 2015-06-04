@@ -21,16 +21,16 @@ class PagesController < ApplicationController
   end
 
   def drinks_results
-    @age = params[:age]
-    @quantity = params[:qty]
-    @drink = params[:drink]
+    @energy, @sugar, @fat, @sodium, @std_drinks = 0, 0, 0, 0, 0
 
-    drink_db = Drink.where( :name => @drink )[0]
+    params["drink"].each_with_index do |drink, i|
+      drink_db = Drink.where( :name => drink )[0]
 
-    @energy = drink_db[:energy_in_kilojoules].to_f * @quantity.to_i
-    @sugar = drink_db[:sugar_in_grams].to_f * @quantity.to_i
-    @fat = drink_db[:fat_in_grams].to_f * @quantity.to_i
-    @sodium = drink_db[:sodium_in_milligrams].to_f * @quantity.to_i
-    @std_drinks = drink_db[:standard_drinks].to_f * @quantity.to_i
+      @energy += drink_db[:energy_in_kilojoules] * params["qty"][i].to_i
+      @sugar += drink_db[:sugar_in_grams] * params["qty"][i].to_i
+      @fat += drink_db[:fat_in_grams] * params["qty"][i].to_i
+      @sodium += drink_db[:sodium_in_milligrams] * params["qty"][i].to_i
+      @std_drinks += drink_db[:standard_drinks] * params["qty"][i].to_i
+    end
   end
 end
