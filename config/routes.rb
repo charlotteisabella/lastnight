@@ -9,5 +9,9 @@ Rails.application.routes.draw do
     get '/stats' => 'pages#stats'
     get '/stats_results' => 'pages#stats_results'
     get '/users_new' => 'users#users_new'
+
+    get '/login' => 'session#new'
+    post '/login' => 'session#create'
+    delete '/login' => 'session#destroy'
      
 end
