@@ -8,6 +8,7 @@
 #  sugar_in_grams       :float
 #  fat_in_grams         :float
 #  sodium_in_milligrams :float
+#  user_id              :integer
 #  created_at           :datetime
 #  updated_at           :datetime
 #

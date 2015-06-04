@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150603023832) do
+ActiveRecord::Schema.define(version: 20150604050302) do
 
   create_table "drinks", force: :cascade do |t|
     t.float    "energy_in_kilojoules"
@@ -37,11 +37,16 @@ ActiveRecord::Schema.define(version: 20150603023832) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "age"
-    t.string  "gender"
-    t.string  "name"
-    t.string  "email"
-    t.string  "password_digest"
+    t.integer  "age"
+    t.string   "gender"
+    t.string   "name"
+    t.string   "email"
+    t.string   "password_digest"
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "image"
+    t.string   "token"
+    t.datetime "expires_at"
   end
 
 end
