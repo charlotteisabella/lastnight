@@ -3,11 +3,14 @@
 
 <%= form_tag("/drinks_results/#{ @age }", method: "get") do %>
   <div class="to-copy">
-    <%= label_tag("qty[]", "Quantity") %>
-    <%= select_tag("qty[]", options_for_select([[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]])) %>
+    <%= label_tag("qty[]", "Qty") %>
+    <%= label_tag("drink[]", "Drink") %> <br>
 
-    <%= label_tag("drink[]", "Drink") %>
+    <div class="stacked">
+    <%= select_tag("qty[]", options_for_select([[1], [2], [3], [4], [5], [6], [7], [8], [9], [10]]), :class => 'qty') %>
+    
     <%= text_field_tag("drink[]") %>
+    </div>
 
     <p class="add-new-drink">+</p>
   </div>
