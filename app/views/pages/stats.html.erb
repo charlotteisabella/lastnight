@@ -1,9 +1,21 @@
-<h2>Tell us a little about yourself.</h2> 
-<h2>What's your...</h2>
+<div class="title">
+  <h2>Tell us a little about yourself.</h2> 
+  <h2>What's your...</h2>
+</div>
 
 
 <%= form_tag("/stats_results", method: "get") do %>
   <%= label_tag(:age, "Age Group") %>
   <%= select_tag(:age, options_for_select([["18-30"], [ "31-50"], ["51-70"], ["71+"]]))%>
+  <div class="radio">
+
+  <%= radio_button_tag(:gender, "female") %>
+  <%= label_tag(:gender, "Female") %>
+
+  <%= radio_button_tag(:gender, "male") %>
+  <%= label_tag(:gender, "Male") %>
+
+  </div>
+
   <%= submit_tag ("Submit"), :class => "primary" %>
 <% end %>

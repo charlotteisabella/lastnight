@@ -1,4 +1,10 @@
 class PagesController < ApplicationController
+  before_action :set_gon
+
+  def set_gon
+    gon.set = false
+  end
+
   def home
   end
 
@@ -20,6 +26,7 @@ class PagesController < ApplicationController
   end
 
   def drinks
+    gon.drinks = Drink.pluck(:name)
     @age = params[:age]
   end
 

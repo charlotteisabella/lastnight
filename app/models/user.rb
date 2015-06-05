@@ -18,6 +18,7 @@
 class User < ActiveRecord::Base
   has_many :drinks
   has_many :foods
+  has_secure_password
 
   def self.omniauth(auth)
     # raise params.inspect

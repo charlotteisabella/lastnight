@@ -10,4 +10,13 @@ $(document).ready(function () {
 
   });
 
+
+  var drinks = gon.drinks;
+
+  $( "#drink_" ).autocomplete({
+      source: drinks
+    });
+
+  console.log( gon.drinks );
+
 });
