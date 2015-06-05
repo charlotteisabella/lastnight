@@ -94,6 +94,12 @@ h1 {
   margin: 50px auto;
  }
 
+ .add-new-drink {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0 8% 25px;
+ }
+
 
 /*********** BUTTONS ***********/
 
